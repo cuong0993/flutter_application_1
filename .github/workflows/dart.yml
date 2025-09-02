@@ -10,7 +10,7 @@ jobs:
           channel: any
           flutter-version: 3.35.2
       - run: sudo xcode-select -switch /Applications/Xcode_16.4.app
-      - run: flutter build ios --debug --no-codesign
+      - run: flutter config --enable-swift-package-manager; flutter build ios --debug --no-codesign
 
 'on':
   push:
