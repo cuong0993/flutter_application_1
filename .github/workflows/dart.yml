@@ -1,15 +1,15 @@
 jobs:
 
   build-ios:
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
       - uses: actions/checkout@v5
       - uses: subosito/flutter-action@v2
         with:
           cache: false
           channel: any
-          flutter-version: 3.35.2
-      - run: sudo xcode-select -switch /Applications/Xcode_16.4.app
+          flutter-version: 3.35.3
+      - run: sudo xcode-select -switch /Applications/Xcode_26.0.app
       - run: flutter config --enable-swift-package-manager; flutter build ios --debug --no-codesign
 
 'on':
